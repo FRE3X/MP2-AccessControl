@@ -4,6 +4,7 @@
 #include <conio.h>
 #include <iostream>
 #include <string.h>
+#include <Windows.h> 
 using namespace std; 
 
 
@@ -16,6 +17,7 @@ private :
 	DWORD				m_dwActiveProtocol;
 	CHAR				m_szSelectedReader[256];
 	long				lRetValue;
+	BYTE				baResponseApdu[300];	
 public:
 	pcsc();
 	~pcsc();

@@ -25,8 +25,8 @@ long pcsc::Connection_PCSC(LPTSTR sReader)
 		NULL,             // r.f.u
 		NULL,             // r.f.u
 		&m_hContext);	 // Returns the resource manager handle.
-		// On appel la méthode pour savoir le status
-	cout << lRetValue << endl;
+	
+	// On appel la méthode pour savoir le status
 	Status_PCSC(lRetValue, "SCardEstablishContext");
 
 	//LPTSTR Test = sReader;
@@ -45,22 +45,26 @@ long pcsc::Connection_PCSC(LPTSTR sReader)
 		Status_PCSC(lRetValue, "SCardListReaders");
 
 	iNumberOfReaders = 0;
+	
 	pszReader = pmszReaders;
-
+	/*wstring reader = pszReader ; 
+	cout << reader  <<endl ; */
 	
 	
 	
+	cout << endl ;// retour a la ligne supplémentaire 
 
 	// Extract the reader strings form the null separated string and 
 	// get the total number of readers.
 	while (*pszReader != '\0')
 	{
-		//cout << "\n      Reader [" << iNumberOfReaders<<"] " << pszReader << endl;
 		printf("%s", pszReader);
 		pszaReaders[iNumberOfReaders] = (LPTSTR)pszReader;
 		pszReader = pszReader + strlen((char*)pszReader) + 1;
 		iNumberOfReaders++;
 	}
+	
+	cout << endl ;// retour a la ligne supplémentaire 
 	
 	
 
@@ -83,6 +87,7 @@ long pcsc::Status_PCSC(long Value,char* msg)
 	}
 }
 
+// a traduire : 
 char*  pcsc::SCardGetErrorString(long ErrorValue)
 {
 	switch (ErrorValue)
