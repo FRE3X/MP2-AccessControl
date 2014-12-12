@@ -14,7 +14,7 @@ void main(){
 	SCARDHANDLE			m_hCard;
 	DWORD				m_dwActiveProtocol;
 	
-	char				m_szSelectedReader[256] = {'A','C','S',' ','A','C','R','1','2','2',' ','0',0};// nom du lecteur
+	wchar_t				m_szSelectedReader[256] = {'A','C','S',' ','A','C','R','1','2','2',' ','0',0};// nom du lecteur
 	
 	WORD *PtWord;
 	byte Valeur; // La valeur de mon caractere
@@ -58,7 +58,7 @@ void main(){
 	////////////////connection ////////////////
 	lRetValue = SCardConnect( 
                    m_hContext, // Adresse du buffer ou on stocke le context récupéré
-					(LPCWSTR)m_szSelectedReader,     // Reader name.
+					m_szSelectedReader,     // Reader name.
 					SCARD_SHARE_EXCLUSIVE,  // Share Mode.
 					SCARD_PROTOCOL_Tx, //Preferred protocols (T=0 or T=1).
 					&m_hCard,               // Returns the card handle.
