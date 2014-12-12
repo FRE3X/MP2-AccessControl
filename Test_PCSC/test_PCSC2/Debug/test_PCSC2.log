@@ -1,20 +1,17 @@
-﻿La génération a démarré 07/12/2014 21:02:43.
-     1>Projet "C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\Test_PCSC\test_PCSC2\test_PCSC2.vcxproj" sur le nœud 2 (Build cible(s)).
+﻿La génération a démarré 09/12/2014 16:20:32.
+     1>Projet "C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\test_PCSC2\test_PCSC2.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Test_PCSC.cpp
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Test_PCSC.cpp
          Test_PCSC.cpp
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(12): warning C4101: 'pszaReaders' : variable locale non référencée
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(11): warning C4101: 'pszReader' : variable locale non référencée
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(15): warning C4101: 'iSelectedReader' : variable locale non référencée
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(19): warning C4101: 'monreader' : variable locale non référencée
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(14): warning C4101: 'iNumberOfReaders' : variable locale non référencée
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(67): warning C4700: variable locale 'tailleReception' non initialisée utilisée
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\test_pcsc\test_pcsc2\test_pcsc.cpp(67): warning C4700: variable locale 'hcard' non initialisée utilisée
+     1>c:\users\a.callot\downloads\mp2-accesscontrol-master\mp2-accesscontrol-master\test_pcsc\test_pcsc2\test_pcsc.cpp(58): warning C4244: '=' : conversion de 'WCHAR' en 'char', perte possible de données
+     1>c:\users\a.callot\downloads\mp2-accesscontrol-master\mp2-accesscontrol-master\test_pcsc\test_pcsc2\test_pcsc.cpp(17): warning C4101: 'iSelectedReader' : variable locale non référencée
+     1>c:\users\a.callot\downloads\mp2-accesscontrol-master\mp2-accesscontrol-master\test_pcsc\test_pcsc2\test_pcsc.cpp(23): warning C4101: 'monreader' : variable locale non référencée
+     1>c:\users\a.callot\downloads\mp2-accesscontrol-master\mp2-accesscontrol-master\test_pcsc\test_pcsc2\test_pcsc.cpp(55): warning C4700: variable locale 'pszReader' non initialisée utilisée
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\Test_PCSC\Debug\test_PCSC2.exe" /INCREMENTAL /NOLOGO winscard.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\Test_PCSC\Debug\test_PCSC2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\Test_PCSC\Debug\test_PCSC2.lib" /MACHINE:X86 Debug\Test_PCSC.obj
-         test_PCSC2.vcxproj -> C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\Test_PCSC\Debug\test_PCSC2.exe
-     1>Génération du projet "C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\Test_PCSC\test_PCSC2\test_PCSC2.vcxproj" terminée (Build cible(s)).
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\test_PCSC2.exe" /INCREMENTAL /NOLOGO winscard.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\test_PCSC2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\test_PCSC2.lib" /MACHINE:X86 Debug\Test_PCSC.obj
+         test_PCSC2.vcxproj -> C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\test_PCSC2.exe
+     1>Génération du projet "C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\test_PCSC2\test_PCSC2.vcxproj" terminée (Build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:01.39
+Temps écoulé 00:00:03.04

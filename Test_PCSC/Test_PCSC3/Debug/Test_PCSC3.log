@@ -1,0 +1,14 @@
+﻿La génération a démarré 09/12/2014 16:46:09.
+     1>Projet "C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Test_PCSC3\Test_PCSC3.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt test_PCSC.cpp
+         test_PCSC.cpp
+     1>c:\users\a.callot\downloads\mp2-accesscontrol-master\mp2-accesscontrol-master\test_pcsc\test_pcsc3\test_pcsc.cpp(49): warning C4018: '<' : incompatibilité signed/unsigned
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\Test_PCSC3.exe" /INCREMENTAL /NOLOGO winscard.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\Test_PCSC3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\Test_PCSC3.lib" /MACHINE:X86 Debug\test_PCSC.obj
+         Test_PCSC3.vcxproj -> C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Debug\Test_PCSC3.exe
+     1>Génération du projet "C:\Users\A.Callot\Downloads\MP2-AccessControl-master\MP2-AccessControl-master\Test_PCSC\Test_PCSC3\Test_PCSC3.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:02.13
