@@ -1,0 +1,19 @@
+﻿La génération a démarré 13/12/2014 11:28:07.
+     1>Projet "C:\Users\FRE3X\Documents\Visual Studio 2012\Projects\PCSC\PCSC\PCSC.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PCSC.cpp test.cpp
+         PCSC.cpp
+     1>c:\users\fre3x\documents\visual studio 2012\projects\pcsc\pcsc\pcsc.cpp(65): warning C4018: '<' : incompatibilité signed/unsigned
+         Génération de code en cours...
+         Compilation en cours...
+         test.cpp
+         Génération de code en cours...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FRE3X\Documents\Visual Studio 2012\Projects\PCSC\Debug\PCSC.exe" /INCREMENTAL /NOLOGO winscard.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FRE3X\Documents\Visual Studio 2012\Projects\PCSC\Debug\PCSC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FRE3X\Documents\Visual Studio 2012\Projects\PCSC\Debug\PCSC.lib" /MACHINE:X86 Debug\PCSC.obj
+         Debug\test.obj
+         PCSC.vcxproj -> C:\Users\FRE3X\Documents\Visual Studio 2012\Projects\PCSC\Debug\PCSC.exe
+     1>Génération du projet "C:\Users\FRE3X\Documents\Visual Studio 2012\Projects\PCSC\PCSC\PCSC.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:02.09
