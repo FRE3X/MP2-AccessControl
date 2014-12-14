@@ -14,7 +14,6 @@ PCSC::PCSC(void)
 
 	ListCardReader = NULL ; 
 	Size_CardReader = SCARD_AUTOALLOCATE;
-	Request = SCARD_PCI_T1;
 	SizeReponse = RcvLenMax; 
 	
 	//instanciation Commande : 
@@ -27,6 +26,7 @@ PCSC::PCSC(void)
 	//Appelle des methodes 
 	Etablish_context();
 	GetCardReader();
+	WaitCard(); 
 	Connect();
 	Transmit(); 
 }
@@ -48,6 +48,29 @@ void PCSC::Etablish_context(){
 		NULL,             
 		&Context); // Adresse du buffer ou on stocke le context récupéré
 	Status(); 
+}
+
+void PCSC::WaitCard(){
+	ReaderState.szReader = nameCardreader; // récupération du nom du lecteur
+	ReaderState.dwCurrentState = SCARD_STATE_UNAWARE; 
+	ReaderState.dwEventState = SCARD_STATE_UNAWARE;
+	
+	cout << "Carte en attente.." << endl;  
+	
+	do{
+		//on recupere le Status du reader 
+		*ReturnValue = SCardGetStatusChange(
+							Context,
+							30,
+							&ReaderState,
+							1);
+	
+	}while((ReaderState.dwEventState & SCARD_STATE_PRESENT) == 0); 
+	// Tant que dwEventState & SCARD_STATE_PRESENT ne sont pas egale a 0 on continue la boucle
+	
+	cout << "Carte présente." <<endl ;  
+
+	
 }
 
 void PCSC::GetCardReader(){
@@ -82,8 +105,25 @@ void PCSC::Connect(){
 }
 
 void PCSC::Transmit(){
+	//choix du protocole en fonction d'active protocole
+	switch (ActiveProtocol)
+	{
+		case SCARD_PROTOCOL_T0:
+			Request = SCARD_PCI_T0; //transmission en character-oriented half-duplex 
+			break;
+
+		case SCARD_PROTOCOL_T1:
+			Request = SCARD_PCI_T1; //transmision en block-oriented half-duplex transmission
+			break;
+
+		default:
+			Request = SCARD_PCI_RAW;
+			break;
+	}
+	
+	//recuperation de l'uid : 
 	*ReturnValue = SCardTransmit(Cardhandle,		//handle.
-							Request,		// Pointer vers le protocole
+							Request,		//le protocole 
 							Commande,	// La commande
 							(DWORD)sizeof(Commande),	// taille de la commande
 							NULL,			
