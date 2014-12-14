@@ -9,12 +9,11 @@ PCSC::PCSC(void)
 	ListCardReader = new char;
 	BuffNameReader = new WORD;
     
-	
-
-
 	ListCardReader = NULL ; 
 	Size_CardReader = SCARD_AUTOALLOCATE;
 	SizeReponse = RcvLenMax; 
+	BuffATR = NULL; 
+	SizeATR = SCARD_AUTOALLOCATE; 
 	
 	//instanciation Commande : 
 	Commande[0] = 0xFF;
@@ -28,11 +27,19 @@ PCSC::PCSC(void)
 	GetCardReader();
 	WaitCard(); 
 	Connect();
-	Transmit(); 
+	GetATR(); 
+	TransmitUID(); 
 }
 
+void PCSC::GetATR(){
+	*ReturnValue = SCardGetAttrib(
+					Context, 
+					SCARD_ATTR_ATR_STRING,
+					(LPBYTE)&BuffATR, 
+					&SizeATR);          
+	Status(); 
 
-
+}
 void PCSC::Status(){
 	if(*ReturnValue != 0x00)
 	{
@@ -104,7 +111,7 @@ void PCSC::Connect(){
 	Status();
 }
 
-void PCSC::Transmit(){
+void PCSC::TransmitUID(){
 	//choix du protocole en fonction d'active protocole
 	switch (ActiveProtocol)
 	{

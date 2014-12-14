@@ -19,7 +19,9 @@ class PCSC
 	BYTE				Commande[5];		//Commande pour retourner UID 
 	BYTE                ResponseUID[300];	//Buffer pour recupere UID
 	DWORD				SizeReponse;		//Recupere la taille de L'UID
-	SCARD_READERSTATE	ReaderState;		//Statu du reader
+	SCARD_READERSTATE	ReaderState;		//Status du reader
+	LPBYTE				BuffATR;			//Buffer pour la récupération de l'ATR  
+	DWORD				SizeATR;			//taille du buffer
 public:
 	PCSC(void);
 	~PCSC(void);
@@ -29,7 +31,8 @@ public:
 	void	GetCardReader();	//méthode pour recuperer le nom du lecteur
 	void	WaitCard();			//Attend que la carte soit connecter au lecteur 
 	void	Connect();			//méthode permettant de ce connecter a la carte 
-	void	Transmit();			//méthode permettant de récupérer l'uid
+	void	TransmitUID();	    //méthode permettant de récupérer l'uid
 	char*	ErrorString(long);	// méthode permettant d'avoir des renseignement sur l'erreur
+	void	GetATR();			//Récupére l'ATR de la carte 
 };
 

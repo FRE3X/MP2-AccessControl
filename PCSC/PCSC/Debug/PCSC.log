@@ -1,9 +1,9 @@
-﻿La génération a démarré 14/12/2014 15:45:25.
+﻿La génération a démarré 14/12/2014 22:09:36.
      1>Projet "C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\PCSC\PCSC\PCSC.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PCSC.cpp
          PCSC.cpp
-     1>c:\users\fre3x\documents\github\mp2-accesscontrol\pcsc\pcsc\pcsc.cpp(88): warning C4018: '<' : incompatibilité signed/unsigned
+     1>c:\users\fre3x\documents\github\mp2-accesscontrol\pcsc\pcsc\pcsc.cpp(95): warning C4018: '<' : incompatibilité signed/unsigned
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\PCSC\Debug\PCSC.exe" /INCREMENTAL /NOLOGO winscard.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\PCSC\Debug\PCSC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FRE3X\Documents\GitHub\MP2-AccessControl\PCSC\Debug\PCSC.lib" /MACHINE:X86 Debug\PCSC.obj
          Debug\test.obj
@@ -12,4 +12,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:01.17
+Temps écoulé 00:00:01.13
